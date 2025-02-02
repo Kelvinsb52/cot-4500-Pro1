@@ -1,7 +1,4 @@
 import math
-# Initial parameters
-x0 = 1.5
-tol = 1e-6  # Tolerance for convergence
 
 # Function for iterative approximation (Approximation Algorithm)
 def approximation_method(x, tolerance):
@@ -81,17 +78,3 @@ def newton_raphson(p0, tolerance, max_iter):
     print("Newton-Raphson did not converge in given iterations.")
     return None
 
-# Main execution block
-if __name__ == '__main__':
-    # Execute and print results for each method
-    fp = fixed_point_iteration(1, tol, 100)
-    print(f"Fixed-Point Iteration result: {fp}")
-
-    bis = bisection(1, 2, tol)
-    print(f"Bisection method result: {bis}")
-
-    print("Approximation Algorithm:")
-    approximation_method(x0, tol)
-
-    root = newton_raphson(p0=1.0, tolerance=tol, max_iter=100)
-    print(f"Newton-Raphson result: {root}")
